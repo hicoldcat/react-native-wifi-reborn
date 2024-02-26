@@ -227,6 +227,8 @@ declare module 'react-native-wifi-reborn' {
      */
     export function getIP(): Promise<string>;
 
+    export function getGateway(): Promise<string>;
+
     export enum IS_REMOVE_WIFI_NETWORK_ERRORS {
         /**
          * Starting android 6, location permission needs to be granted for wifi scanning.

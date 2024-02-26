@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.net.DhcpInfo;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -235,7 +236,6 @@ public class RNWifiModule extends ReactContextBaseJavaModule {
         });
     }
 
-
     /**
      * Returns if the device is currently connected to a WiFi network.
      */
@@ -342,6 +342,13 @@ public class RNWifiModule extends ReactContextBaseJavaModule {
         final WifiInfo info = wifi.getConnectionInfo();
         final String stringIP = longToIP(info.getIpAddress());
         promise.resolve(stringIP);
+    }
+
+    @ReactMethod
+    public void getGateway(final Promise promise) {
+        final DhcpInfo dhcpInfo = wifi.getDhcpInfo();
+        final String gateway = longToIP(dhcpInfo.gateway);
+        promise.resolve(gateway);
     }
 
     /**
