@@ -9,6 +9,7 @@
 #import <arpa/inet.h>
 #import <netinet/in.h>
 #import <ifaddrs.h>
+#import "getgateway.h"
 
 @interface WifiManager () <CLLocationManagerDelegate>
 @property (nonatomic,strong) CLLocationManager *locationManager;
@@ -29,6 +30,7 @@
   return self;
 }
 
+//获取网关等信息
 - (NSString *)getGatewayIpForCurrentWiFi {
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
@@ -68,13 +70,10 @@
     }
     
     freeifaddrs(interfaces);
-
     in_addr_t i = inet_addr([address cStringUsingEncoding:NSUTF8StringEncoding]);
     in_addr_t* x = &i;
-
     unsigned char *s = getdefaultgateway(x);
     NSString *ip=[NSString stringWithFormat:@"%d.%d.%d.%d",s[0],s[1],s[2],s[3]];
-    
     free(s);
     return ip;
 }
