@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6EF91E9924362856000D3B91 /* ConnectError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF91E9824362856000D3B91 /* ConnectError.m */; };
-		9DB7CA8E2B8DCAB400C46561 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7CA8D2B8DCAB400C46561 /* getgateway.c */; };
 		B3E7B58A1CC2AC0600A0062D /* RNWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNWifi.m */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +27,6 @@
 		134814201AA4EA6300B7C361 /* libRNWifi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNWifi.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF91E9724362856000D3B91 /* ConnectError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectError.h; sourceTree = "<group>"; };
 		6EF91E9824362856000D3B91 /* ConnectError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectError.m; sourceTree = "<group>"; };
-		9DB7CA8B2B8DCAB400C46561 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
-		9DB7CA8C2B8DCAB400C46561 /* getgateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getgateway.h; sourceTree = "<group>"; };
-		9DB7CA8D2B8DCAB400C46561 /* getgateway.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getgateway.c; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNWifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNWifi.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNWifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNWifi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,9 +53,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				9DB7CA8D2B8DCAB400C46561 /* getgateway.c */,
-				9DB7CA8C2B8DCAB400C46561 /* getgateway.h */,
-				9DB7CA8B2B8DCAB400C46561 /* route.h */,
 				6EF91E9724362856000D3B91 /* ConnectError.h */,
 				6EF91E9824362856000D3B91 /* ConnectError.m */,
 				B3E7B5881CC2AC0600A0062D /* RNWifi.h */,
@@ -127,7 +120,6 @@
 			files = (
 				B3E7B58A1CC2AC0600A0062D /* RNWifi.m in Sources */,
 				6EF91E9924362856000D3B91 /* ConnectError.m in Sources */,
-				9DB7CA8E2B8DCAB400C46561 /* getgateway.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
